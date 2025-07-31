@@ -7,12 +7,12 @@ function Header() {
   return (
     <>
       <div className="h-flex h-center-div">
-        <a href=""></a>
+        {/* <a href=""></a> */}
         <a>
           <img
             src={logo}
             alt="mfs portfolio logo"
-            className="mfs-logo"
+            className="mfs-logo m-fullwidth"
             onClick={() => setTap(() => tap + 1)}
           />
         </a>
