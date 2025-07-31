@@ -1,0 +1,19 @@
+mfs-portfolio/
+├── src/
+│   ├── assets/           # Images, icons, etc.
+│   ├── components/       # Reusable UI components
+│   │   ├── Header.jsx
+│   │   ├── Hero.jsx
+│   │   ├── Skills.jsx
+│   │   ├── Projects.jsx
+│   │   ├── Resume.jsx
+│   │   ├── BlogPreview.jsx
+│   │   ├── ContactForm.jsx
+│   │   └── Footer.jsx
+│   ├── data/             # JSON files for skills, projects, etc.
+│   │   ├── skills.js
+│   │   └── projects.js
+│   ├── pages/
+│   │   └── Home.jsx      # Main homepage layout
+│   ├── App.jsx
+│   └── index.css
