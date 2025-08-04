@@ -1,25 +1,21 @@
 import { useState } from "react";
+
+import "../sass/header.scss";
+
 import logo from "../assets/mfs-logo.jpg";
+import logoNew from "../assets/logo/mfs-logo-new-white.svg";
 
 function Header() {
-  const [tap, setTap] = useState(0);
-
   return (
     <>
-      <div className="h-flex h-center-div">
-        {/* <a href=""></a> */}
-        <a>
-          <img
-            src={logo}
-            alt="mfs portfolio logo"
-            className="mfs-logo m-fullwidth"
-            onClick={() => setTap(() => tap + 1)}
-          />
-        </a>
+      <div className="header-container">
+        <div>logo</div>
+        <div className="header-nav-items">
+          <div>link 1</div>
+          <div>link 2</div>
+          <div>link 3</div>
+        </div>
       </div>
-      <p>
-        You have tapped the logo <button>{tap}</button> times!!
-      </p>
     </>
   );
 }

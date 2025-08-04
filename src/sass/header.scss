@@ -1,0 +1,10 @@
+.header-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.header-nav-items {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 100px;
+}
