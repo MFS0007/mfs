@@ -1,0 +1,71 @@
+@use "sass:map";
+
+// Color map for easy theme management
+$colors: (
+  background: #f9f9f9,
+  card: #ffffff,
+  border: #e0e0e0,
+  text: #333333,
+  accent: #0077ff,
+  shadow: rgba(0, 0, 0, 0.05),
+);
+
+// Mixin for card shadow
+@mixin card-shadow {
+  box-shadow: 0 4px 8px map.get($colors, shadow);
+}
+
+// SkillCard styles
+.skill-card {
+  background-color: map.get($colors, card);
+  border: 1px solid map.get($colors, border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+  max-width: 20rem;
+  @include card-shadow;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  .skill-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: map.get($colors, accent);
+  }
+
+  .skill-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: map.get($colors, text);
+    margin-bottom: 0.5rem;
+  }
+
+  .skill-description {
+    font-size: 0.95rem;
+    color: map.get($colors, text);
+    opacity: 0.85;
+    line-height: 1.4;
+  }
+}
+
+// Responsive tweaks
+@media (max-width: 768px) {
+  .skill-card {
+    padding: 1rem;
+
+    .skill-icon {
+      font-size: 2rem;
+    }
+
+    .skill-title {
+      font-size: 1.1rem;
+    }
+
+    .skill-description {
+      font-size: 0.9rem;
+    }
+  }
+}
