@@ -1,0 +1,56 @@
+// ------------------
+// Light Theme
+// ------------------
+$light-theme: (
+  "primary": #0969da,
+  "primary-active": #054da7,
+  "secondary": #6c757d,
+  "secondary-active": #565e64,
+  "text": #0d1117,
+  "text-secondary": #57606a,
+  "success": #198754,
+  "warning": #ffc107,
+  "alert": #dc3545,
+  "disabled": #adb5bd,
+  "element-background": #ffffff,
+  "global-background": #f8f9fa,
+  "organism-background": #ffffff,
+  "primary-background": #e7f1ff,
+  "border": #d0d7de,
+  "overlay": rgba(0, 0, 0, 0.5),
+  "highlight": #ffeb3b,
+  "info": #0dcaf0,
+  "info-secondary": #6edff6,
+  "success-secondary": #a3e4b5,
+  "warning-secondary": #ffe8a1,
+  "error-secondary": #f5b5b0,
+);
+
+// ------------------
+// Dark Theme
+// ------------------
+$dark-theme: map-merge(
+  $light-theme,
+  (
+    "primary": #58a6ff,
+    "primary-active": #1f6feb,
+    "text": #c9d1d9,
+    "border": #30363d,
+    "global-background": #0d1117,
+    "primary-background": #161b22,
+    "alert": #f85149,
+  )
+);
+
+// ------------------
+// Current theme toggle
+// Change $current-theme to $dark-theme for dark mode
+// ------------------
+$current-theme: $light-theme;
+
+// ------------------
+// Function to get a color
+// ------------------
+@function theme-color($name) {
+  @return map-get($current-theme, $name);
+}

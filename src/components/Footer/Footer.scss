@@ -1,0 +1,46 @@
+.footer {
+  background-color: #0d1117;
+  color: theme-color(alert);
+  padding: 1.5rem 0;
+  text-align: center;
+  border-top: 1px solid #30363d;
+
+  &__content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  &__links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 0.5rem;
+
+    a {
+      color: #58a6ff;
+      font-size: 1.4rem;
+      transition: transform 0.2s ease, color 0.3s ease;
+
+      &:hover {
+        color: #1f6feb;
+        transform: translateY(-3px);
+      }
+
+      .icon {
+        vertical-align: middle;
+      }
+    }
+  }
+
+  &__copy {
+    font-size: 0.9rem;
+    color: #8b949e;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer__links {
+    gap: 1rem;
+  }
+}
